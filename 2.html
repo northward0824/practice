@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+
+<script>
+	// 数组
+	// var a=[0,1,2,3];
+	// console.log(a);		/查询数组全部内容
+	// console.log(a[1]);		/第二个内容
+	// console.log(a.length);		/查询数组长度
+	// console.log(a[a.length-1]);		/查询倒数第二个
+	// a[5]=5;			/创建一个新的内容
+	// console.log(a[5]);		/查询新内容
+	// console.log(a[4])		/未定义的内容，返回undefined
+	// 遍历
+	// for(i=0;i<=a.length-1;i++){
+	// 	console.log(a[i])
+	// }
+	// 
+	// 输出最大的
+	// var a=[0,1,2,3];
+	// max(a)
+	// function max(name){
+	// 	var max=name[0];
+	// 	for(var i=1;i<=name.length-1;i++){
+	// 		if(max<name[i]){
+	// 			max=name[i]
+	// 		}
+	// 	}
+	// 	console.log(max);
+	// }
+	
+
+	// 排序
+	// var a=[0,1,2,3];
+	// order(a)
+	// function order(arr,type="<"){
+		// if(type=="<"){
+		// 	orderup(arr)
+		// }else if(type==">"){
+		// 	orderdown(arr)
+		// }else if(type==undefined){
+		// 	orderup(arr)
+		// }
+		
+		// type=type==undefined?"<":type;
+		// type=type||"<";
+	// 	if(type=="<"){
+	// 		orderup(arr)
+	// 	}else if(type==">"){
+	// 		orderdown(arr)
+	// 	}
+	// }
+	// function orderdown(name){
+	// 	for(var i=0;i<=name.length-1;i++){
+	// 		for(var j=i+1;j<=name.length-1;j++){
+	// 			if(name[i]<name[j]){
+	// 				var temp=name[i];
+	// 				name[i]=name[j];
+	// 				name[j]=temp;
+					
+	// 			}
+	// 		}
+	// 	}
+	// 	console.log(name)
+	// }
+	// function orderup(name){
+	// 	for(var i=0;i<=name.length-1;i++){
+	// 		for(var j=i+1;j<=name.length-1;j++){
+	// 			if(name[i]>name[j]){
+	// 				var temp=name[i];
+	// 				name[i]=name[j];
+	// 				name[j]=temp;
+					
+	// 			}
+	// 		}
+	// 	}
+	// 	console.log(name)
+	// }
+	
+	
+	
+
+
+	// while循环
+	// var i=1;
+	// var sum=0;
+	// while(i<=10){
+	// 	sum=sum+i;
+	// 	i++;
+	// }
+	// document.write(sum);
+	
+	// do while循环
+	// var i=1;
+	// var sum=0;
+	// do{
+	// 	sum=sum+i;
+	// 	i++;
+	// }while(i<=10)
+	// document.write(sum);
+
+	// continue的使用
+	// for(var b=1;b<=10;b++){
+	// 	if(b%2==0){
+	// 		continue;
+	// 	}
+	// 	console.log(b);
+	// }
+	
+
+	// 是否存在
+	// var a=[0,1,2,3]; 
+	// var result=exist(a,3);
+	// alert(result);
+	// function exist(arr,value){
+	// 	if(!(typeof arr=="object"&& arguments.length>1)){
+	// 		return "输入错误";
+	// 	}
+	// 	for(var i=0;i<arr.length;i++){
+	// 		if(arr[i]==value){
+	// 			return true;
+	// 		}
+	// 	}
+	// 	return false;
+	// }
+
+
+	// 在数组中每个数字后加入字符，输出的是字符串
+	// var a=[0,1,2,3];
+	// var result=join(a);
+	// alert(result);
+	// function join(arr,str){
+	// 	var newarr="";
+	// 	str=str==undefined?"-":str;
+	// 	for(var i=0;i<arr.length;i++){
+	// 		if(i<arr.length-1){
+	// 			newarr+=arr[i]+str;
+	// 		}else{
+	// 			newarr+=arr[i];
+	// 		}
+	// 	}
+	// 	return newarr;
+	// }
+	// 筛选偶数
+	// var a=[0,1,2,3];
+	// var result=filter(a);
+	// alert(result);
+	// function filter(arr){
+	// 	var newarr=[];
+	// 	for(var i=0;i<arr.length;i++){
+	// 		if(i%2==0){
+	// 			newarr[newarr.length]=arr[i];
+	// 		}
+	// 	}
+	// 	return newarr;
+	// }
+
+	// 二维数组的遍历
+	// var a=[0,1,2,3,4];
+	// var b=[5,6,7,8,9];
+	// var c=[a,b];
+	// name(c);
+	// function name(shuzu){
+	// 	for(var i=0;i<=shuzu.length-1;i++){
+	// 		for(var j=0;j<=shuzu[i].length-1;j++){
+	// 			console.log(shuzu[i][j]);
+	// 		}
+	// 	}
+	// }
+	
+	// 二位数组取最大 
+	// var a=[0,1,2,3,4];
+	// var b=[5,6,7,8,9];
+	// var c=[a,b];
+	// max(c)
+	// function max(name){
+	// 	var max=name[0][0];
+	// 	for(var i=0;i<=name.length-1;i++){
+	// 		for(var j=0;j<=name[i].length-1;j++){
+	// 			if(max<name[i][j]){
+	// 				max=name[i][j]
+	// 			}
+	// 		}
+	// 	}
+	// 	console.log(max)
+	// }
+	// 二维数组去空??
+	// var a=[0,1,,2,3,4];
+	// var b=[5,6,7,,8,9];
+	// var c=[a,b];
+	// var c1=[a1,b1];
+	// var a1=[];
+	// var b1=[];
+	// for(var i=0;i<=c.length-1;i++){
+	// 	for(var j=0;j<=c[i].length-1;j++){
+	// 		if(c[i][j]!=undefined){
+	// 			c1[i][(c1[i]).length]=c[i][j];
+	// 		}
+	// 	}
+	// }
+	// console.log(c1);
+	
+
+	// 一维数组去空位
+	// var a=[0,1,2,,3,,3];
+	// blank(a);
+	// function blank(name){
+	// 	var b=[];
+	// 	for(var i=0;i<=name.length-1;i++){
+			// if(a[i]==undefined){
+			// 	continue;
+			// }
+			// b[b.length]=a[i];
+			// 或者
+			// if(name[i]!=undefined){
+			// 	b[b.length]=name[i];
+			// }
+			// 或者
+			// if(typeof a[i]!="undefined"){
+			// b[b.length]=a[i];
+			// }
+	// 	}
+	// 	console.log(b)
+	// }
+	
+
+</script>	
