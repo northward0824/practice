@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="1.js"></script>
+</head>
+<body>
+	<script>
+
+		// 警示框
+		// alert(1);
+		// alert('a');
+		// alert('哈')；
+		// 控制台
+		// console.log('hah');
+		// 文件写入
+		// document.write('hah');
+		
+
+		// 变量
+		// var a=1;
+		// a=10;
+		// var a=8;
+		// a=5;
+		// var b;
+		// alert(b)
+
+
+		// 算数运算符
+		// var num1=30;
+		// var str="我们班有学生";
+		// alert(str+num1);
+
+		// var num1=30;
+		// var str="我们班有学生";
+		// var str1=str+num1;
+		// alert(str1)
+
+
+
+		// var num1=20;
+		// var num2=30;
+		// var info="我们班有两个班，第一个班有"+num1+"人,第二个班有"+num2+"人，总共有"+(num1+num2)+"人";
+		// alert(info)
+		
+
+		// 自增
+		// var num=20;
+		// alert(num++);		20		
+		// alert(num);			21
+		
+		// alert(++num);		22
+		// alert(num);			22
+		
+		// alert(++num+5);		28
+		// alert(num);			23
+		
+		// num=num+8;
+		// alert(num);			31
+		
+		// alert(3-num++);		-28
+		// alert(num)a			32
+
+
+		// 自增与自减区别
+		// var a=10,b="20";
+		// alert(a-b+b)
+		
+
+
+		// 模板字符串
+		// var str=`我们班有两个班，第一个班有${num1}人,第二个班有${num2}人，总共有${num1+num2}人4`
+		// alert(str)
+
+
+		// 比较运算
+		// alert(1==true)			true
+		// alert(1=="1")		true
+		// alert(1==="1")		false
+		
+		// 两个字符串比较
+		// alert("aa"<"b")			true
+		
+		// 两个数字型字符串
+		// alert("10">"2")			false
+	
+
+		// 数字型字符串与数字
+		// alert("10">2)		true
+		
+		// 非数字型字符串与数字
+		// alert(10>"2px")			non		false
+		// 
+		// 
+		// 
+		// 逻辑运算符
+		// 与
+		 // console.log(10<7 && 4<6)	false
+		 // console.log(10>7 && 4<6)	true 
+		 // console.log(10>7 && 4>6)		false
+		 
+		 // 全真
+		// console.log(10 && 7)	 true	7
+		// console.log(7 && 10)	true    10
+		// 一真一假
+		// console.log(10<7 && 6)	false	false
+		// console.log(6 && 10<7)	false		false
+		// 全假
+		// console.log(0 && 10<7)		false 		0
+		// console.log(10<7 && 0)			false 		false
+		// console.log("" && 0);		false	无
+		
+		
+
+
+		// var num=12;
+		// console.log(0 && num++)		0
+		// console.log(num)		12
+		// console.log(num++ && 0)		0
+		// console.log(num)		13
+		 
+		 
+		// 或
+		// var num=12;
+		// console.log(1 || num++)		1
+		// console.log(num)		12
+		// console.log(num++ || 1)		12
+		// console.log(num)		13
+		
+		// console.log(10<7 || 6<4)		false
+		// console.log(10<7 || 4<6)		true
+		// console.log(7<10 || 4<6)		true
+		
+		// 全真
+		// console.log(10 || 7)	true 	10
+		// console.log(7 || 10)	true	7
+		 
+		// 一真一假
+		// console.log(10 || 0)	true	10
+		// console.log(0 || 10)	true 	10
+		// 
+		
+		// 
+		// 全假
+		// console.log(0 || 10<7)			false 		false
+		// console.log(10<7 || 0)				false 		0
+		
+		// 三元
+		// var flag=21;
+		// flag%2===0?alert(true):alert(false)
+
+		// 执行流程
+		// 单路：
+		// var num=12
+		//  if(num%2===0){
+		//  	alert(true)
+		//  }
+
+
+		// 双路
+		// var num=13;
+		// if(num%2===0){
+		// 	alert(true)
+		// }else{
+		// 	alert(false)
+		// }
+
+
+		// 多路
+		// var num=prompt("请录入学生成绩",60);
+		// if(num<=100 && num>=90){
+		// 	alert("优秀")
+		// }else if(num<90 && num>=80){
+		// 	alert("良好")
+		// }else if(num<80 && num>=70){
+		// 	alert("中等")
+		// }else if(num<70 && num>=60){
+		// 	alert("及格")
+		// }
+		// else if(num<60 && num>=0){
+		// 	alert("不及格")
+		// }
+		// else{
+		// 	alert("错误的信息")
+		// }
+		 
+		
+		// switch
+		// var week=1*prompt("请录入",1);
+		// switch(week){
+		// 	case 1:
+		// 		alert("一组");
+		// 		break;
+		// 	case 2:
+		// 		alert("二组");
+		// 		break;
+		// 	case 3:
+		// 		alert("三组");
+		// 		break;
+		// 	case 4:
+		// 		alert("四组");
+		// 		break;
+		// 	case 5:
+		// 		alert("五组");
+		// 		break;
+		// 	case 6:
+		// 		alert("六组");
+		// 		break;
+		// 	case 7:
+		// 		alert("七组");
+		// 		break;
+		// 	default:		
+		// 		alert("输入错误");
+		// }
+		// 
+		
+		// 循环
+		// for(var i=1;i<=10;i++){
+		// 	alert(1);
+		// }
+
+		// 1~10相加
+		// var sum=0;
+		// for(var i=1;i<=10;i++){
+		// 	sum=sum+i;
+		// }
+		// alert(sum)
+		
+		// 偶数求和
+		// var sum=0;
+		// for(var i=1;i<=10;i++){
+		// 	if(i%2===0){
+		// 		sum=sum+i;
+		// 	}
+		// }
+		// alert(sum)
+		// 或者
+		// var sum=0;
+		// for(var i=0;i<=10;i+=2){
+		// 	sum=sum+i;
+		// }
+		// alert(sum)
+		// 奇数求和
+		// var sum=0;
+		// for(var i=1;i<=10;i+=2){
+		// 	sum=sum+i;
+		// }
+		// alert(sum)
+		
+		// 十行
+		// star(10);
+		// function star(rows){
+		// 	for(var j=1;j<=rows;j+=1){
+		// 		for(var i=1;i<=j;i++){
+		// 			document.write("*")
+		// 		}
+		// 		document.write("<br>")
+		// 	}
+
+		// }
+		
+
+		
+		// 表格
+		// 列颜色
+		// table(8);
+		// function table(rows){
+		// 	document.write("<table border=1 cellspacing=0")
+		// 		for(var i=0;i<rows;i++){
+		// 			document.write("<tr>")
+		// 				for(var j=1;j<=i;j++){
+		// 					if(j%2===0){
+		// 						document.write("<td bgcolor=red>"+i+"X"+j+"="+i*j)
+		// 						document.write("</td>")
+		// 					}else{
+		// 						document.write("<td bgcolor=blue>"+i+"X"+j+"="+i*j)
+		// 						document.write("</td>")
+		// 					}
+							
+		// 				}
+		// 			document.write("</tr>")
+
+		// 		}
+		// 	document.write("</table>")
+		// }
+		
+
+
+		// 行颜色
+		// var z=1*prompt("输入", 5);
+		// document.write("<table border=1 cellspacing=0>");
+		// 	for(var i=1;i<=z;i++){
+		// 		if(i%2==0){
+		// 			document.write("<tr bgcolor=yellow>");
+		// 		}else{
+		// 			document.write("<tr bgcolor=pink>");
+		// 		}
+				
+		// 		for(var j=1;j<=i;j++){
+		// 			document.write("<td>"+i+"X"+j+"="+i*j+"</td>");
+		// 		}	
+		// 	}
+		// document.write("</table>");
+		
+
+		// 一次输出表
+		// var table="<table border=1>";
+		// for (var i=1;i<10;i++){
+		// 	table=table+"<tr>";
+		// 	for(var j=1;j<10;j++){
+		// 		table=table+"<td>"+i+"</td>"
+		// 	}
+		// 	table=table+"</tr>";
+		// }
+		// var table=table+"</table>";
+		// document.write(table);
+
+
+		// 三角星号
+		// var row=10;
+		// var table="<table cellspacing=3>";
+		// for (var i=1;i<row;i++){
+		// 	table=table+"<tr>";
+		// 	for(var j=1;j<=row-i;j++){
+		// 		table=table+"<td>"+"&nbsp"+"</td>"
+		// 	}
+		// 	for(var j=1;j<=2*i-1;j++){
+		// 		table=table+"<td>"+"*"+"</td>"
+		// 	}
+		// 	table=table+"</tr>";
+		// }
+		// var table=table+"</table>";
+		// document.write(table);
+
+		// 或者
+		// mstar(8)
+		// function mstar(row){
+		// 	for (var i=1;i<row;i++){
+		// 		for(var j=1;j<=row-i;j++){
+		// 			document.write("&nbsp")
+		// 		}
+		// 		for(var j=1;j<=2*i-1;j++){
+		// 			document.write("*")
+		// 		}
+		// 		document.write("<br>")
+		// 	}
+		
+		// }
+		
+		
+
+		// 斐波那契数列
+		// shulie(150)
+		// function shulie(max){
+		// 	var i=0,j=1;
+		// 	for(k=0;k<max;){
+		// 		k=i+j;
+		// 		document.write(k+"&nbsp");
+		// 		i=j;
+		// 		j=k;
+		// 	}
+		// }
+		
+
+
+	</script>
+</body>
+</html>
