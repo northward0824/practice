@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+
+
+<script>
+	// arrgument的使用
+	// 在数组最后添加内容
+	// var arr=[1,2,3];
+	// push(arr,"a");
+	// function push(arr){
+	// 	// console.log(arguments)
+	// 	for(var i=1;i<arguments.length;i++){
+	// 		arr[arr.length]=arguments[i]
+	// 	}
+	// 	console.log(arr)
+	// }
+
+	// 作用域
+	// a();
+	// var num=10;
+	// function a(){
+	// 	alert(num);		undefined
+	// 	var num="a";
+	// 	alert(num);		a
+	// 	a1();
+	// 		function a1(){
+	// 			alert(num);		a
+	// 		}
+	// }
+
+	
+
+	
+	// var num=10;
+	// function a(){
+	// 	alert(num);		10
+	// 	num="a";
+	// 	alert(num);		a
+	// 	a1();
+	// 		function a1(){
+	// 			alert(num);			undefined
+	// 			var num=12;
+	// 		}
+	// }
+	// a();
+
+
+	// 函数做形参
+	// var result=a(2,3,add);
+	// console.log(result);
+	// function add(num1,num2){
+	// 	return num1+num2;
+	// }
+	// function a(num1,num2,fn){
+	// 	return fn(num1,num2)
+	// }
+	// 函数做形参，筛偶数
+	// var a=[0,1,2,3];
+	// function change(arr){
+	// 	var newarr=[];
+	// 	for(var i=0;i<arr.length;i++){
+	// 		if(arr[i]%2==0){
+	// 			newarr[newarr.length]=arr[i];
+	// 		}
+	// 	}
+	// 	return newarr;
+	// }
+	// function use(arr1,fn){
+	// 	return fn(arr1);
+	// }
+	// var result=use(a,change);
+	// console.log(result);
+	
+
+
+// 映射
+	// 映射做各种运算
+	// var a=[0,1,2,3];
+	// var result=change(a,function(value){
+	// 	return value*2;
+	// })
+	// console.log(result);
+	// function change(arr,fn){
+	// 	var newarr=[];
+	// 	for(var i=0;i<arr.length;i++){
+	// 		newarr[newarr.length]=fn(arr[i]);
+	// 	}
+	// 	return newarr;
+	// }
+	// 映射返回偶数
+	// var a=[0,1,2,3];
+	// var result=change(a,function(value){
+	// 	return value%2==0;
+	// })
+	// console.log(result);
+	// function change(arr,fn){
+	// 	var newarr=[];
+	// 	for(var i=0;i<arr.length;i++){
+	// 		if(fn(arr[i]) == true){
+	// 			newarr[newarr.length]=arr[i];
+	// 		}	
+	// 	}
+	// 	return newarr;
+	// }
+	// 映射筛选数字，有的话返回是第几个，没有的话返回-1
+// 	var a=[0,1,2,3];
+// 	var result=search(a,function(value){
+// 		return value==6;
+// 	})
+// 	console.log(result)
+// 	function search(arr,fn){
+// 		for(var i=0;i<arr.length;i++){
+// 			if(fn(arr[i])==true){
+// 				return i;
+// 		}
+		
+// 	}
+// 	return -1;
+// }
+// 	筛选是否有某个值，返回最后一个这个值的位置,没有的话返回-1
+// 	var a=[0,1,2,5,3,4,3];
+// 	var result=search(a,function(value){
+// 		return value==3;
+// 	})
+// 	console.log(result)
+// 	function search(arr,fn){
+// 		for(var i=arr.length-1;i>=0;i--){
+// 			if(fn(arr[i])==true){
+// 				return i;
+// 		}		
+// 	}
+// 	return -1;
+// }
+// 映射，有一个>0的返回true，没有的话返回fslae
+// 	var a=[0,1,2,3];
+// 	var result=some(a,function(value){
+// 		return value>0;
+// 	})
+// 	console.log(result)
+// 	function some(arr,fn){
+// 		for(var i=0;i<arr.length;i++){
+// 			if(fn(arr[i])==true){
+// 				return true;
+// 		}
+		
+// 	}
+// 	return false;
+// }
+	
+
+// 映射，全部>0返回true，只要有一个<0返回fslae
+var a=[0,1,2,3];
+var result=every(a,function(value){
+	return value>0;
+});
+console.log(result);
+function every(arr,fn){
+	for(i=0;i<=arr.length;i++){
+		if(!fn(arr[i])){
+			return false;
+		}
+	}
+	return true;
+}
+
+</script>
