@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	// 将数组翻转,从数组的最后一个开始往进放
+	// var a=[0,1,2,3];
+	// console.log(revorce(a))
+	// function revorce(arr){
+	// 	var newarr=[];
+	// 	for(var i=arr.length-1;i>=0;i--){
+	// 		push(newarr,arr[i]);
+	// 	}
+	// 	return newarr;
+	// }
+	// 将元素放入一个新数组，可以引用
+	// function push(arr,...rest){
+	// 	for(var i=0;i<rest.length;i++){
+	// 		arr[arr.length]=rest[i];
+	// 	}
+	// }
+
+	// 删除数组中任意位置的几个数
+	// var a=[0,1,2,3];
+	// console.log(splicedel(a,1,2));			0,3
+	// function splicedel(arr,pos,num){
+	// 	var newarr=[];
+	// 	for(var i=0;i<arr.length;i++){
+	// 		if(i>=pos && i<pos+num){
+	// 			continue;
+	// 		}
+	// 		newarr[newarr.length]=arr[i];
+	// 	}
+	// 	return newarr;
+	// }
+	
+	// 在数组中的任意位置添加字符数字
+	// var a=[0,1,2,3];
+	// console.log(spliceadd(a,1,2,"a"));		0,2,a,1,2,3	
+	// function spliceadd(arr,pos,...rest){
+	// 	var newarr=[];
+	// 	for(var i=0;i<pos;i++){
+	// 		newarr[newarr.length]=arr[i];		
+	// 	}
+	// 	for(var i=0;i<rest.length;i++){
+	// 		newarr[newarr.length]=rest[i];		
+	// 	}
+	// 	for(var i=pos;i<arr.length;i++){
+	// 		newarr[newarr.length]=arr[i];		
+	// 	}
+	// 	return newarr;
+	// }
+
+	// 在数组中的任意位置添加或删除字符数字
+	// var a=[0,1,2,3];
+	// console.log(splice(a,1,3,"a","b"))
+	// function splice(arr,pos,num,...rest){
+	// 	var tnewarr=splicedel(arr,pos,num);
+	// 	if(rest.length>0){
+	// 		var tnewarr=spliceadd(tnewarr,pos,...rest);
+	// 	}
+	// 	return tnewarr;
+	// } 
+
+
+
+
+// 递归函数
+// fn(0);
+// function fn(num){			5 5 4 3 2 1
+// 	if(num<5){
+// 		fn(++num);	
+// 	}
+// 	alert(num);
+// }
+	// 数组的深拷贝
+// var a=[0,1,2,3,["a","b"]];
+// var result=copy(a);			0,1,2,3,a,b
+// console.log(result);
+// a=[1,2,3];
+// console.log(result);		0,1,2,3,a,b
+// function copy(arr){
+// 	var newarr=[];
+// 	for(var i=0;i<arr.length;i++){
+// 		if(typeof arr[i]=='object'){
+// 			newarr[i]=copy(arr[i]);
+// 		}else{
+// 			newarr[i]=arr[i];
+// 		}	
+// 	}
+// 	return newarr;
+// }
+
+
+
+// 闭包函数
+// function fn(){
+// 	var name=10;
+// 	return fn1;
+// 	function fn1(){
+// 		num++;
+// 		return num;
+// 	}
+// }
+// var result=fn();
+// alert(result());			11;
+// 箭头函数
+// var fn=a=>a;
+// alert(fn(10));
+// 即：
+// var fn=function(a){
+// 	return a;
+// }
+
+
+
+// let与var
+// 局部变量覆盖全局变量
+// var num=10;
+// function fn(){
+// 	alert(num);			undefined
+// 	if(true){
+// 		var num=20;
+// 		alert(num);			20	
+// 	}
+// }
+// fn();
+// alert(num);				10
+
+// var num=10;
+// function fn(){
+// 	alert(num);			10
+// 	if(true){
+// 		let num=10;
+// 		alert(num);			10
+// 	}
+// }
+// fn();
+// alert(num);			10
+
+// 块级作用域的记忆效果
+// var arr=[];
+// for(var i=0;i<10;i++){
+// 	arr[i]=function(){
+// 		alert(i);
+// 	}
+// }
+// console.log(i);		10
+// arr[2]();			10
+
+// var arr=[];
+// for(let i=0;i<10;i++){
+// 	arr[i]=function(){
+// 		alert(i);
+// 	}
+// }	
+// arr[2]();	2
+
+
+
+// 内置顶层函数 
+// alert(Number("123"))			123
+// alert(Number("00123"))			123
+// alert(Number("0o123"))		83
+// alert(Number(00123))			83
+// alert(Number("abs"))			nan 
+// alert(Number(null))			0
+
+// console.log(parseInt("100px"))		100
+// console.log(parseInt("AB100px"))		nan
+// console.log(parseInt(" -100px"))		-100
+
+
+// 隐式类型转换
+// num=4;
+// if(num%2){		
+// 	alert(num);
+// }else{
+// 	alert(++num);			5
+// }
+</script>
