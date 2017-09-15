@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	// 内置对象
+	let str="abcd";
+	// 查找
+	console.log(str.charAt(3));
+	// console.log(str.indexOf("a"));
+	// indexOf模拟includes
+	// function includes(str,value){
+	// 	let result=str.indexOf(value);
+	// 	if(result!=-1){
+	// 		return true;
+	// 	}
+	// 	return false;
+	// }
+	// let str1=includes(str,"a");
+	// console.log(str1);
+
+
+	// 截取
+	// let str="abcd";
+	// let str1=str.slice(2,4);			cd
+	// let str1=str.slice(1);		bcd
+	// let str1=str.slice(2,-1);			c
+	// console.log(str1);
+
+
+	// 替换
+	// let str1=str.replace("ab","**");
+	// 多次替换函数	
+	// let str="abacd";
+	// function replaceAll(str,value){
+	// 	// let star="";
+	// 	// for(let i=0;i<str.length;i++){
+	// 	// 	star+="*"
+	// 	// }
+	// 	let star = "*".repeat(value.length);
+	// 	while(str.includes(value)){
+	// 		str=str.replace(value,star);	
+	// 	}
+	// 	return str;
+		
+	// }
+	// let result=replaceAll(str,"a"); 
+	// console.log(result);
+
+	// 转换
+	// let str="a-b-a-c-d";
+	// console.log(str.split("-"));
+
+
+	// 返回字符串中某个值所在的所有位置
+	// let str="ababababab"
+	// function search(str,value){
+	// 	let arr=[];
+	// 	let star="";
+	// 	for(let i=0;i<value.length;i++){
+	// 		star+="*";
+	// 	}
+	// 	while(str.includes(value)){
+	// 		arr.push(str.indexOf(value));
+	// 		str=str.replace(value,star);
+	// 	}
+	// 	return arr;
+	// }
+	// console.log(search(str,"a"));
+
+	// let str="abddcaabncdnabniddgabhud"
+	// function search(str,value){
+	// 	let arr=[];
+	// 	for(let i=0;i<str.length;i++){
+	// 		if(str.slice(i,i+value.length)==value){
+	// 			arr.push(i);			
+	// 		}
+	// 	}
+	// 	return arr;
+	// }
+	// console.log(search(str,"ab"));
+
+
+	// 数组
+	// let arr=new Array(0,1,2);
+	// console.log(arr);
+	// 添加
+	// let result=arr.pop(1);		0	1
+	// arr.pop(1);					
+	// console.log(arr);			0
+	// console.log(result);		2
+	
+	// 添加删除
+	// let result=arr.splice(1,1);
+	// let result=arr.splice(1,0,"a");
+	// console.log(arr);
+	// console.log(result);
+
+	// 一个数组加入到另一个数组
+	// let arr=new Array(0,1,2);
+	// let arr1=["a","b","c"];
+	// arr.push(...arr1);		
+	// console.log(arr);
+	
+	// concat实现一个数组加入到另一个数组,形成一个新的数组对旧的没影响
+	// let arr=new Array(0,1,2);
+	// let arr1=["a","b","c"];
+	// newarr=arr.concat(arr1);
+	// console.log(newarr);
+
+	// 翻转
+	// let arr=new Array(0,3,2);
+	// console.log(arr.reverse());
+	// console.log(arr);
+	
+
+	// 排序
+	// let arr=new Array(0,33,201);
+	// console.log(arr.sort());
+	// console.log(arr);
+	// 降序
+	// arr.sort(function(a,b){
+	// 	return a-b<0;
+	// })
+	// console.log(arr);
+	// 升序
+	// arr.sort(function(a,b){
+	// 	return a-b>0;
+	// })
+	// console.log(arr);
+
+	// 遍历实现过滤
+	// let arr=new Array(0,1,2);
+	// let newarr=[];
+	// arr.forEach(function(value){
+ //  		if(value%2==0){
+ //  			 newarr.push(value);
+ //  		}
+	// });
+	// console.log(newarr);
+	
+
+	// 过滤
+	// let arr=new Array(0,1,2);
+	// let newarr=arr.filter(function(value) {
+	// 	return value%2==0;
+	// })
+	// let newarr=arr.filter((value)=>value%2==0);
+	// console.log(newarr);
+
+	// map方法
+	// let arr=new Array(0,1,2);
+	// let newarr=arr.map(function(value,index,obj) {
+	// 	return value+index;
+	// })
+	// let newarr=arr.map((value,index)=>value+index)
+	// console.log(newarr);
+	
+	// some：只要存在一个某值，就返回true,不存在返回false
+	// let arr=new Array(0,1,2);
+	// let newarr=arr.some(function(value){
+	// 	return value==0;
+	// })
+	// console.log(newarr);
+	
+	// every：如果全部是某值，就返回true,只要有一个不是就返回false
+	// let arr=new Array(0,1,2);
+	// let newarr=arr.every(function(value){
+	// 	return value==0;
+	// });
+	// let newarr=arr.every(())
+	// console.log(newarr);
+	
+
+	// 去重
+	// 判断将要放入的新数组是否有现在要放的这个元素，有的话跳过放下一个
+	// let arr=[1,2,3,3,4,5,5,4];
+	// function delRep(){
+	// 	let newarr=[];
+	// 	for(let i=0;i<arr.length;i++){
+	// 		// 简单的方法
+	// 			// if(!newarr.includes(arr[i])){
+	// 			// 	newarr.push(arr[i]);
+	// 			// }
+	// 		// 遍历新数组判断
+	// 		let flag=true;
+	// 			// 如果J从0开始，新数组长度为空，不满足0<newarr.length,直接跳出循环
+	// 		for(let j=-1;j<newarr.length;j++){
+	// 			if(newarr[j]==arr[i]){
+	// 				flag=false;
+	// 				break;
+	// 			}	
+	// 		}
+	// 		if(flag){
+	// 				newarr.push(arr[i]);
+	// 			}
+	// 	}
+	// 	return newarr;
+	// }
+	// console.log(delRep(arr));
+
+	// // 放这个元素之前判断后面还有没有这个元素，没有的话放这个，有的话跳过放下一个元素，下一个也执行此判断
+	// let ar=[1,2,3,3,4,5,5,4];
+	// // 给数组构造函数的原型对象添加去重方法
+	// Array.prototype.delRep = function(){
+	// 	let newarr=[];
+	// 	for(let i=0;i<this.length;i++){
+	// 		// 每个元素都带有一个true的标记
+	// 		let flag=true;
+	// 		for(let j=i+1;j<this.length;j++){			
+	// 			if(this[j]==this[i]){
+	// 				// 当后边有重复的元素，它所带标记变为false，跳出循环
+	// 				flag=false;
+	// 				break;
+	// 			}	
+	// 		}
+	// 		// 循环遍历arr时赋值给新数组，所以赋值这步应该写在大循环里，小循环外
+	// 		if(flag){
+	// 			newarr.push(this[i]);
+	// 		}
+	// 	}
+	// 	return newarr;
+	// }
+	
+	// console.log(ar.delRep());
+	
+
+	// math
+	// console.log(Math.ceil(-10.5));
+	// for(let i=0;i<10;i++){
+	// 	console.log(Math.random());
+	// }
+
+	// 随机取数组中不重复的几个数
+	// while的使用
+	let arr=[1,2,3,5,6,2,3,5,8,5,4];
+	let newarr=[];
+	function randomArr(arr,value){
+		for(let i=0;i<value;i++){
+			let num=Math.floor((Math.random())*arr.length);
+			// while(newarr.includes(arr[num])){
+			// 	num=Math.floor((Math.random())*arr.length);
+			// }
+			// newarr.push(arr[num]);
+			
+			// if(newarr.includes(arr[num])){
+			// 	i--;
+			// }else{
+			// 	newarr.push(arr[num]);
+			// }
+		}
+		return newarr;
+	}
+
+	// 对新数组长度限制，使用if也不会缺少元素
+	// function randomArr(arr,value){
+	// 	let newarr=[];
+	// 	for(let i=0;newarr.length<value;i++){
+	// 		let num=Math.floor((Math.random())*arr.length);
+	// 		if(!newarr.includes(arr[num])){
+	// 			newarr.push(arr[num]);
+	// 		}
+	// 	}
+	// 	return newarr;
+	// }
+	
+	// 确定元素不是重复的后，将元素放入新数组，再进行下一次循环
+	// function randomArr(arr,value){
+	// 	let newarr=[];
+	// 	for(let i=0;i<value;){
+	// 		let num=Math.floor((Math.random())*arr.length);
+	// 		if(!newarr.includes(arr[num])){
+	// 			newarr.push(arr[num]);
+	// 			i++;
+	// 		}
+	// 	}
+	// 	return newarr;
+	// }	
+	console.log(randomArr(arr,3));
+
+
+
+</script>
+ 

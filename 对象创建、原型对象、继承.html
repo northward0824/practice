@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+// 对象
+	// 构造函数
+	// function name(){}
+	// let he = new name();
+	// let he2 = new name();
+	// console.log(typeof he);
+	// he.age = 21;
+	// he.name='su';
+	// he2.age = 23;
+	// he2.name = 'ye';
+	// console.log(he,he2);
+	
+	// function phone(color,price,size){
+	// 	this.color = color;
+	// 	this.price = price;
+	// 	this.size = size;
+	// 	this.all = function(all){
+	// 		alert(all);
+	// 	};
+	// }
+	// let iphone = new phone("seablue",500,"5");
+	// iphone.all("ha");
+	// console.log(iphone);
+	// console.log(iphone.size);
+	// 或者：
+	// console.log(iphone["size"]);
+	// iphone["all"](1);
+	// 遍历属性
+	// for(let i in iphone){
+	// 	console.log(`${i}---${iphone[i]}`);
+	// }
+
+
+	// jason
+	// let he = {
+	// 	"age" : 21,
+	// 	"sex" : "man",
+	// 	"name" : "su",
+	// 	"say" : function(all){
+	// 		alert(all)
+	// 	},
+	// };
+	// console.log(he);
+	// console.log(he.sex);
+	// he.say("ye");
+	// console.log(he["sex"]);
+	// 遍历属性
+	// for(let i in he){
+	// 	console.log(`${i}---${he[i]}`);
+	// }
+
+
+	// 类构造对象
+	// class Student{
+ //    	constructor(name,sex){
+ //    		this[1] = "a";
+ //     	    this.name = name;
+ //            this.sex = sex;
+ //            this.say = function(value){
+	// 			alert(value);
+	// 	   	}
+	//     }
+ //        study(){
+ //     		alert("学习")
+ //        };
+ //        play(){
+ //     	    alert(this.name);
+ //        };
+ //        speech(value){
+ //        	this.say(value);
+ //        }
+ //    }
+ //    let he = new Student("su","man");
+ //    console.log(he);
+ //    he.study();
+ //    he.play();
+ //    he.speech("演讲")
+ //    he["say"]("good");   
+ //    console.log(he[1]);
+ 
+
+
+
+
+
+ 	// 原型对象
+	// function phone(color,price,size){
+	// 	this.color = color;
+	// 	this.price = price;
+	// 	this.size = size;
+		// this.all = function(all){
+		// 	alert(all)
+		// };
+	// }
+	// phone.prototype = {
+	// 	all : function(all){
+	// 		alert(all)
+	// 	}
+	// }
+	// phone.prototype.eat = function(){
+ //  		alert('eat');
+	// }
+	// let iphone = new phone();
+	// let iphone1 = new phone();
+
+	// console.log(iphone==iphone1);		false
+	// console.log(iphone.all()==iphone1.all());		true
+	// console.log(iphone.all==iphone1.all);		false
+	
+
+	// console.log(iphone.all==iphone1.all)		true
+	// iphone.eat();
+	// delete iphone.size;
+	// console.log(iphone.size);
+	// iphone=null;
+	// console.log(iphone);
+
+	// 继承
+	function person(){
+		this.name="person";
+		// this.aa = function(){
+		// 	alert("父的构造函数")
+		// }
+	}
+	// person.prototype = {
+	// 	aa:function(){
+	// 		alert("父的原型对象")
+	// 	}
+	// }
+	function student(){
+		this.number="WUIF1707001";
+		// this.aa = function(){
+		// 	alert("子的构造函数")
+		// }
+	}
+	// student.prototype.aa = function(){
+	// 		alert("子的原型对象")
+	// 	}
+	
+
+	// student.prototype = new person();
+	// let su = new student();
+	// console.log(su);
+	// su.aa();
+	// console.log((su.__proto__)==student.prototype);
+	// console.log((student.prototype.__proto__)==person.prototype);
+	// console.log(person.prototype.__proto__==Object.prototype);
+</script>
